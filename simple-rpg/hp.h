@@ -18,9 +18,9 @@ class hp {
         return true;
 
     };
-
+// getter
     hptype getMaxHP() {
-        return MaxHp;
+        return MaxHP;
     };
     hptype getCurrentHP() {
         return CurrentHP;
