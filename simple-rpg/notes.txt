@@ -1,0 +1,4 @@
+warrior - highest damage reduction HP 19hp
+Wizard - uses magic hp 9
+Cleric - Healer hp 14
+rogue - hp 14
