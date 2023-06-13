@@ -1,7 +1,7 @@
 #include <iostream>
 #include "hp.h"
-#include "hitpointtypes.h"
 #include "allclass.h"
+#include "levelsystem.h"
 
 int main()
 {
@@ -13,29 +13,16 @@ int main()
 
     Rogue rog1;
 
-    std::cout <<  "Warrior\n" 
-        << "-MaxHP; "  << warr1.getMaxHP() << '\n' 
-        << "-Strength: " << warr1.getStrength() << '\n'
-        << "-Intellect: " << warr1.getIntellect() << '\n';
-       
-
-     std::cout <<  "Wizard\n" 
-        << "-MaxHP; "  << wiz1.getMaxHP() << '\n' 
-        << "-Strength: " << wiz1.getStrength() << '\n'
-        << "-Intellect: " << wiz1.getIntellect() << '\n';
-           
-
-     std::cout <<  "Cleric\n" 
-        << "-MaxHP; "  << cler1.getMaxHP() << '\n' 
-        << "-Strength: " << cler1.getStrength() << '\n'
-        << "-Intellect: " << cler1.getIntellect() << '\n';
-       
-
-     std::cout <<  "Rogue\n" 
-        << "-MaxHP; "  << rog1.getMaxHP() << '\n' 
-        << "-Strength: " << rog1.getStrength() << '\n'
-        << "-Intellect: " << rog1.getIntellect() << '\n';
-
+    for (int i = 0; i < 2; i++) {
+         std::cout << "Cleric Level \n"
+            << "-MaxHP: " << cler1.getMaxHP() << '\n'
+            << "-Strength: " << cler1.getStrength() << '\n'
+            << "-Intellect: " << cler1.getIntellect() << '\n'
+            << "-Level: " << cler1.getLevel() << '\n'
+            << "-EXP: " << cler1.getCurrentEXP() << '/' << cler1.getEXPToNextLevel() << '\n';
+         if (i < 1) 
+            cler1.gainEXP(100u);
+    };
     return 0;
-
+    
 };

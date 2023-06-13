@@ -1,6 +1,5 @@
 #pragma once
 #include "hp.h"
-#include "hitpointtypes.h"
 #include "statblock.h"
 
 class Warrior : public hp, public StatBlock{

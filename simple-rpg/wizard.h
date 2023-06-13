@@ -1,6 +1,5 @@
 #pragma once
 #include "hp.h"
-#include "hitpointtypes.h"
 #include "statblock.h"
 
 class Wizard : public hp, public StatBlock{

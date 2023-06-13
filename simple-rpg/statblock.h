@@ -1,5 +1,6 @@
 #pragma once
-#include "stattypes.h"
+
+typedef std::uint16_t stattype;
 
 // 0xff 4 byte 
 class StatBlock {
@@ -13,10 +14,17 @@ class StatBlock {
         Intellect = (stattype)1u; 
         };
     
-    StatBlock(stattype s, stattype i) { 
+    explicit StatBlock(stattype s, stattype i) { 
         Strength = s;
         Intellect = i;
         };
     stattype getStrength() { return Strength; }; 
     stattype getIntellect() { return Intellect; };        
+
+    protected:
+        void increaseStats(stattype s, stattype i){
+           Strength += s;
+           Intellect += i;     
+
+        };
 };
